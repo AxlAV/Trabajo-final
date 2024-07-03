@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Subredes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados de Subredes</h1>
+        <p>Nueva máscara de subred: {{ nueva_mascara }}</p>
+        <h2>Subredes creadas:</h2>
+        <ul>
+        {% for subred in subredes %}
+            <li>{{ subred }}</li>
+        {% endfor %}
+        </ul>
+        <a href="{{ url_for('index') }}">Volver</a>
+    </div>
+</body>
+</html>
